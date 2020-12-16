@@ -1,0 +1,9 @@
+{
+  "id": "ee5fda75-2e72-4025-ac22-51db01915f14",
+  "name": "Samples",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

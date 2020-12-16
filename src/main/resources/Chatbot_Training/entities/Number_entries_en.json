@@ -1,0 +1,14 @@
+[
+  {
+    "value": "amount",
+    "synonyms": [
+      "amount"
+    ]
+  },
+  {
+    "value": "quantity",
+    "synonyms": [
+      "quantity"
+    ]
+  }
+]

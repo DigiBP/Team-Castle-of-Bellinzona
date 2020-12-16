@@ -1,0 +1,9 @@
+{
+  "id": "ec267463-fdcf-417d-a212-2f7f08c5e945",
+  "name": "Maximum",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

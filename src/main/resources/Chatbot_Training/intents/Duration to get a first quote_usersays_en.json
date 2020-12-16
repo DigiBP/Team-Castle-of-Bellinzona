@@ -1,0 +1,31 @@
+[
+  {
+    "id": "1c0d3f07-15c1-4ddf-b39d-0be59f23dafc",
+    "data": [
+      {
+        "text": "How long does it take",
+        "meta": "@Duration",
+        "alias": "Duration",
+        "userDefined": true
+      },
+      {
+        "text": " to get a first ",
+        "userDefined": false
+      },
+      {
+        "text": "quote",
+        "meta": "@Quote",
+        "alias": "Quote",
+        "userDefined": true
+      },
+      {
+        "text": "?",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

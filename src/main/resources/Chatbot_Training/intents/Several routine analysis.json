@@ -1,0 +1,64 @@
+{
+  "id": "beafd6c1-77b8-48d0-8305-e85f4f40032e",
+  "name": "Several routine analysis",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "5b52f89b-3020-4e1a-a5ae-da59d6928dbe",
+          "name": "number",
+          "required": false,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "e44b01f6-6b0b-4166-a9fd-a71b3860a1f9",
+          "name": "One",
+          "required": false,
+          "dataType": "@One",
+          "value": "$One",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "If there are a couple of samples you can give the number of samples to be measured. If one routine analysis should contain more than one analytical method, you can thick the corresponding analysis to be measured (e.g.: peptide mapping and intact). If more than one product should be analyzed, then place a separate order for each corresponding product."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

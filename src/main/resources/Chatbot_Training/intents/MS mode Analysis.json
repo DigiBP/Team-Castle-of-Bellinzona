@@ -1,0 +1,35 @@
+{
+  "id": "91767492-45b8-4398-9f53-a410be6d7063",
+  "name": "MS mode Analysis",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "The listed MS mode analysis are established at VIA Solutions AG, if any other are needed and the analysis is urgent we recommend to search for another service provider. If the analysis are not urgent, please get in touch with our sales departement, we are happy to develop for you a method."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

@@ -1,0 +1,9 @@
+{
+  "id": "fdfec0b3-a359-455d-addf-d5e6fc8b2a72",
+  "name": "Whatis",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

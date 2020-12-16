@@ -1,0 +1,9 @@
+{
+  "id": "5871fd93-b087-4e37-beb1-7f29c7ff8388",
+  "name": "Quote",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0sxx7c0" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <decision id="idcostsdmn" name="costs">
+    <decisionTable id="DecisionTable_04f35ub">
+      <input id="Input_1" label="analysistype">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>analysistype</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0kq9wbm" label="Numberofsamplestobeanalyzed">
+        <inputExpression id="LiteralExpression_1mpdr3p" typeRef="string">
+          <text>Numberofsamplestobeanalyzed</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09pt08c" label="MSmode">
+        <inputExpression id="LiteralExpression_0641i4j" typeRef="string">
+          <text>MSmode</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="costs" typeRef="integer" biodi:width="192" />
+      <rule id="DecisionRule_0sm48gd">
+        <inputEntry id="UnaryTests_0xy78eh">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mqw1wu">
+          <text>"1","2","3","4","5"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mol2w2">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_040l9eo">
+          <text>1000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13bsuh9">
+        <inputEntry id="UnaryTests_08ggpuf">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ckakcw">
+          <text>"1","2","3","4","5"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e6wum3">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0twfve0">
+          <text>2000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_141xxtu">
+        <inputEntry id="UnaryTests_0sonug2">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1awryqx">
+          <text>"6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19qhkzh">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1idjtia">
+          <text>1500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kp7w2g">
+        <inputEntry id="UnaryTests_1hq934p">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kivebc">
+          <text>"6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jms9lg">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qiheeh">
+          <text>2500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qa6gdd">
+        <inputEntry id="UnaryTests_1m84ufe">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19qdg1d">
+          <text>"11","12","13","14","15"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c3vny1">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b4mx5m">
+          <text>2000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10revcx">
+        <inputEntry id="UnaryTests_0si5j19">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vhzwt">
+          <text>"11","12","13","14","15"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00kx0mv">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ovs6j">
+          <text>3000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dgucep">
+        <inputEntry id="UnaryTests_00xflio">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1szfi6s">
+          <text>"1","2","3","4","5"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t6l76i">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0b0x17t">
+          <text>2600</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t135vf">
+        <inputEntry id="UnaryTests_19vxtof">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xzd26b">
+          <text>"1","2","3","4","5"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dkauzp">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0se2k08">
+          <text>3500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12a3cyj">
+        <inputEntry id="UnaryTests_12j9mnl">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uw7a1x">
+          <text>"6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02wmbcv">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qppvqm">
+          <text>3000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0teible">
+        <inputEntry id="UnaryTests_08fmlo2">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pdfxoz">
+          <text>"6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lnjv7j">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04acz40">
+          <text>4000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o45tm1">
+        <inputEntry id="UnaryTests_15w9a29">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sdcry3">
+          <text>"11","12","13","14","15"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06iyzev">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qr40l0">
+          <text>3500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07aa3l0">
+        <inputEntry id="UnaryTests_02wzpl7">
+          <text>"Routine Express"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12bh288">
+          <text>"11","12","13","14","15"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_035jojk">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nuaop6">
+          <text>4500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h6s2ty">
+        <inputEntry id="UnaryTests_0vahitw">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vu6jay">
+          <text>"1","2","3","4","5","6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1st9hwb">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hla4be">
+          <text>3000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10yt32s">
+        <inputEntry id="UnaryTests_1nd4db5">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0syhxbq">
+          <text>"1","2","3","4","5","6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w0hg1l">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_124fld9">
+          <text>2001</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u1txz8">
+        <inputEntry id="UnaryTests_1n8b0ld">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mlfx00">
+          <text>"16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_137vou7">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dpq9nh">
+          <text>5000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sct74i">
+        <inputEntry id="UnaryTests_06smccn">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tk6tk7">
+          <text>"16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gvabbd">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rkpg0x">
+          <text>4000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1igqpmy">
+        <inputEntry id="UnaryTests_14w67gc">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hh7abi">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1up5vyz">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14yesio">
+          <text>4600</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1idwd1f">
+        <inputEntry id="UnaryTests_0x2gaxz">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17lnw87">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0orx3pe">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0996cgv">
+          <text>5500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p0o2f3">
+        <inputEntry id="UnaryTests_1kx61mb">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i5v2lf">
+          <text>"32","33","34","35","36","37","38","39","40","31"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dwxzso">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q6773m">
+          <text>5001</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tm01fv">
+        <inputEntry id="UnaryTests_1a0ftl8">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fmbc49">
+          <text>"31","32","33","34","35","36","37","38","39","40"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04mensf">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0io4g4h">
+          <text>6005</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w1wm3e">
+        <inputEntry id="UnaryTests_09qj1i1">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02w4zjx">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12w1fgk">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uufab8">
+          <text>5700</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19nkna0">
+        <inputEntry id="UnaryTests_0j9vus2">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g7w03q">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g2ysp9">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lr4tqk">
+          <text>6500</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fbz06x">
+        <inputEntry id="UnaryTests_0wdqm4p">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ukcj5a">
+          <text>"50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c716ym">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18at15n">
+          <text>6100</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01s8ipd">
+        <inputEntry id="UnaryTests_11bda7z">
+          <text>"Routine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xa5c9x">
+          <text>"50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xnokpz">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t9dte5">
+          <text>7000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1638evh">
+        <inputEntry id="UnaryTests_1xvpkk3">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bdg2oq">
+          <text>"1","2","3","4","5","6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_163eqk8">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r0gn2s">
+          <text>4001</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kjew9p">
+        <inputEntry id="UnaryTests_0455vct">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ckfsb">
+          <text>"1","2","3","4","5","6","7","8","9","10"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wvbt9m">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kmzcs5">
+          <text>3001</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08wxwd9">
+        <inputEntry id="UnaryTests_04k16fa">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z60avu">
+          <text>"11","12","13","14","15","16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c3v9sr">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ou9q40">
+          <text>3501</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15lpap7">
+        <inputEntry id="UnaryTests_1jd55p1">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fj3psi">
+          <text>"11","12","13","14","15","16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10lyxo9">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lfohbs">
+          <text>4501</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gcj0x9">
+        <inputEntry id="UnaryTests_15cxdta">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hbzuko">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x6dvxv">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1covzpu">
+          <text>4011</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09fvz6b">
+        <inputEntry id="UnaryTests_178hs9e">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sc0d0i">
+          <text>"31","32","33","34","35","36","37","38","39","40"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bs6x5y">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wp72p5">
+          <text>4511</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1omy90e">
+        <inputEntry id="UnaryTests_0h7amel">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p0sk0m">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s3u1ms">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1neac13">
+          <text>5011</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p9lcwb">
+        <inputEntry id="UnaryTests_05lrwg2">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18vydi0">
+          <text>"&gt;50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14s019z">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ouw4gy">
+          <text>5511</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uxp9ot">
+        <inputEntry id="UnaryTests_1xpg74s">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o60bh4">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vewymf">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nzlf2a">
+          <text>5011</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0er70e8">
+        <inputEntry id="UnaryTests_0ke56sq">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oonath">
+          <text>"31","32","33","34","35","36","37","38","39","40"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ke44mk">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0csvt8b">
+          <text>5511</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_175qxmy">
+        <inputEntry id="UnaryTests_1ndodnv">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_169wzgc">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1el8mm9">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cxfm2d">
+          <text>6011</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hjwe40">
+        <inputEntry id="UnaryTests_196ibid">
+          <text>"Stability study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1to9y7m">
+          <text>"50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s27cx0">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kb6var">
+          <text>6511</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ul6k34">
+        <inputEntry id="UnaryTests_029amxm">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15cta73">
+          <text>"11","12","13","14","15","16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jkusfo">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jwh6ro">
+          <text>2502</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1v5oda8">
+        <inputEntry id="UnaryTests_1gko975">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zf45ci">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13sc4tj">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aeu98d">
+          <text>3002</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ghwn0z">
+        <inputEntry id="UnaryTests_1t4hnwa">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ts20hp">
+          <text>"31","32","33","34","35","36","37","38","39","40"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s2lp0c">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qsod5q">
+          <text>3502</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1evoc8w">
+        <inputEntry id="UnaryTests_1xtxzl1">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05evegg">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uuk4jy">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qzt7zm">
+          <text>4002</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u7g2y1">
+        <inputEntry id="UnaryTests_1cget69">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01aqd7m">
+          <text>"50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ueok54">
+          <text>"Intact non reduced","Intact reduced"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ydbmtf">
+          <text>4502</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hm395g">
+        <inputEntry id="UnaryTests_0b3pq64">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a84ige">
+          <text>"11","12","13","14","15","16","17","18","19","20"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_199w8lj">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1463k95">
+          <text>3502</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_162dx0k">
+        <inputEntry id="UnaryTests_03xohij">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x0sdff">
+          <text>"21","22","23","24","25","26","27","28","29","30"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yn7rs9">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0d25304">
+          <text>4002</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0psomxn">
+        <inputEntry id="UnaryTests_1aatlka">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ba8v3u">
+          <text>"31","32","33","34","35","36","37","38","39","40"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09myzao">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04xy23d">
+          <text>4502</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mrt1fx">
+        <inputEntry id="UnaryTests_0mrgmtd">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tjcf60">
+          <text>"41","42","43","44","45","46","47","48","49","50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0420rvk">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oviq7k">
+          <text>5000</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07sibk1">
+        <inputEntry id="UnaryTests_0mdiare">
+          <text>"Characterization study"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tmmbbw">
+          <text>"50"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1htvl46">
+          <text>"Peptide mapping","Disulfide analysis","Glycan analysis","Glycosylation deamidation oxidation","Truncation N / C Terminal","Misincooperation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xjsw7o">
+          <text>5502</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="idcostsdmn">
+        <dc:Bounds height="80" width="180" x="470" y="180" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

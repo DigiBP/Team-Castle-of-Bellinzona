@@ -1,0 +1,51 @@
+[
+  {
+    "id": "365cf983-8bdd-450a-bb13-98fe026b3c6c",
+    "data": [
+      {
+        "text": "What is the",
+        "meta": "@Whatis",
+        "alias": "Whatis",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "maximum",
+        "meta": "@Maximum",
+        "alias": "Maximum",
+        "userDefined": true
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "number",
+        "meta": "@Number",
+        "alias": "Number",
+        "userDefined": true
+      },
+      {
+        "text": " of ",
+        "userDefined": false
+      },
+      {
+        "text": "samples",
+        "meta": "@Samples",
+        "alias": "Samples",
+        "userDefined": true
+      },
+      {
+        "text": " that can be analyzed.",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "id": "ab83966b-816f-4665-b2c4-45b62428dcd3",
+  "name": "Customer E-Mail address",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Please put the E-Mail address of the person in that has filled out the order. We use the initial E-Mail for order clarification. Later we can collect further E-Mails for the distribution of results if needed from your side"
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

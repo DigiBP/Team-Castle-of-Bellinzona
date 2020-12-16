@@ -1,0 +1,523 @@
+{
+    "name": "Send-Quote (copy)",
+    "flow": [
+        {
+            "id": 1,
+            "module": "gateway:CustomWebHook",
+            "version": 1,
+            "parameters": {
+                "hook": 605748,
+                "maxResults": 2
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -539,
+                    "y": -11
+                },
+                "restore": {
+                    "hook": {
+                        "label": "send-quote"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "hook",
+                        "type": "hook",
+                        "label": "Webhook",
+                        "required": true
+                    },
+                    {
+                        "name": "maxResults",
+                        "type": "number",
+                        "label": "Maximum number of results"
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "value",
+                        "type": "buffer"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "eledo:Generate",
+            "version": 1,
+            "parameters": {
+                "__IMTCONN__": 1919574
+            },
+            "mapper": {
+                "fields": {
+                    "price": "{{1.costs}}",
+                    "MS_mode": "{{1.MSmode}}",
+                    "Timeline": "{{1.duration}}",
+                    "Quote_Scope": "{{1.Quotescope}}",
+                    "Sample_Type": "{{1.Sampletype}}",
+                    "Contact_Name": "{{1.Companyname}}",
+                    "Quote_remark": "{{1.Quoteremark}}",
+                    "company_name": "{{1.Companyname}}",
+                    "Analysis_type": "{{1.analysistype}}",
+                    "Contact_Email": "{{1.email}}",
+                    "Sample_number": "{{1.Numberofsamplestobeanalyzed}}",
+                    "Quotation_title": "{{1.Quotationtitle}}",
+                    "Quotation_number": "{{1.Quotenumber}}"
+                },
+                "templateId": "5fb6407cbb82ab14534ee94a"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -239,
+                    "y": -11
+                },
+                "restore": {
+                    "templateId": {
+                        "label": "Quote"
+                    },
+                    "__IMTCONN__": {
+                        "label": "My Eledo connection (michel.altermatt_93@bluewin.ch)"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "templateId",
+                        "type": "select",
+                        "label": "Template"
+                    },
+                    {
+                        "name": "fields",
+                        "spec": [
+                            {
+                                "name": "company_name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Contact_Name",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Contact_Email",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Quotation_number",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Quotation_title",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Quote_Scope",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Quote_remark",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Analysis_type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "MS_mode",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Sample_Type",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Sample_number",
+                                "type": "text"
+                            },
+                            {
+                                "name": "Timeline",
+                                "type": "text"
+                            },
+                            {
+                                "name": "price",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Custom Fields"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 8,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": 61,
+                    "y": -11
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 9,
+                            "module": "dropbox:uploadLargeFile",
+                            "version": 5,
+                            "parameters": {
+                                "__IMTCONN__": 1922473
+                            },
+                            "mapper": {
+                                "data": "{{7.data}}",
+                                "path": "/",
+                                "filename": "{{7.fileName}}",
+                                "overwrite": false
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 361,
+                                    "y": -161
+                                },
+                                "restore": {
+                                    "path": {
+                                        "mode": "chose"
+                                    },
+                                    "overwrite": {
+                                        "mode": "chose"
+                                    },
+                                    "__IMTCONN__": {
+                                        "label": "digipb.VIAsolutions@gmail.com"
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "path",
+                                        "type": "folder",
+                                        "label": "Folder",
+                                        "required": true
+                                    },
+                                    {
+                                        "mean": "name",
+                                        "name": "filename",
+                                        "type": "filename",
+                                        "label": "File Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "mean": "data",
+                                        "name": "data",
+                                        "type": "buffer",
+                                        "label": "Data",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "overwrite",
+                                        "type": "boolean",
+                                        "label": "Overwrite an existing file",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 10,
+                            "module": "email:ActionSendEmail",
+                            "version": 7,
+                            "parameters": {
+                                "account": 1919580,
+                                "saveAfterSent": false
+                            },
+                            "mapper": {
+                                "cc": [],
+                                "to": [
+                                    "{{1.email}}"
+                                ],
+                                "bcc": [],
+                                "from": "",
+                                "html": "Dear {{1.Customername}}, \n\nThank you for considering VIA-Solutions as your analytical service provider. \n\nPlease, find enclosed your quotation ({{1.Quotenumber}}) for your signature. Please send us the signed quote back to: VIA-Solutions@outlook.com\n\nIn case of any questions, please do not hesitate to contact us.\n\nBest regrads\nVIA Solutions",
+                                "sender": "",
+                                "headers": [],
+                                "replyTo": "",
+                                "subject": "{{1.Quotenumber}}",
+                                "priority": "normal",
+                                "inReplyTo": "",
+                                "references": [],
+                                "attachments": [
+                                    {
+                                        "cid": "",
+                                        "data": "{{7.data}}",
+                                        "fileName": "{{7.fileName}}"
+                                    }
+                                ],
+                                "contentType": "html"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": 361,
+                                    "y": 139
+                                },
+                                "restore": {
+                                    "cc": {
+                                        "mode": "chose",
+                                        "items": []
+                                    },
+                                    "to": {
+                                        "mode": "chose",
+                                        "items": [
+                                            "undefined"
+                                        ]
+                                    },
+                                    "bcc": {
+                                        "mode": "chose",
+                                        "items": []
+                                    },
+                                    "account": {
+                                        "label": "My Others (SMTP) connection (SMTP VIA-solutions@outlook.com)"
+                                    },
+                                    "headers": {
+                                        "items": []
+                                    },
+                                    "priority": {
+                                        "label": "Normal"
+                                    },
+                                    "references": {
+                                        "mode": "chose",
+                                        "items": []
+                                    },
+                                    "attachments": {
+                                        "mode": "chose",
+                                        "items": [
+                                            "undefined"
+                                        ]
+                                    },
+                                    "contentType": {
+                                        "label": "HTML"
+                                    },
+                                    "saveAfterSent": {
+                                        "label": "No"
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "account",
+                                        "type": "account",
+                                        "label": "Connection",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "saveAfterSent",
+                                        "type": "select",
+                                        "label": "Save message after sending",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "to",
+                                        "spec": {
+                                            "name": "email",
+                                            "type": "email",
+                                            "label": "Email address",
+                                            "required": true
+                                        },
+                                        "type": "array",
+                                        "label": "To",
+                                        "labels": {
+                                            "add": "Add a recipient",
+                                            "edit": "Edit a recipient"
+                                        },
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "subject",
+                                        "type": "text",
+                                        "label": "Subject"
+                                    },
+                                    {
+                                        "name": "contentType",
+                                        "type": "select",
+                                        "label": "Content Type",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "html",
+                                                "text"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "attachments",
+                                        "spec": [
+                                            {
+                                                "name": "fileName",
+                                                "type": "filename",
+                                                "label": "File name",
+                                                "required": true,
+                                                "semantic": "file:name"
+                                            },
+                                            {
+                                                "name": "data",
+                                                "type": "buffer",
+                                                "label": "Data",
+                                                "required": true,
+                                                "semantic": "file:data"
+                                            },
+                                            {
+                                                "name": "cid",
+                                                "type": "text",
+                                                "label": "Content-ID"
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Attachments",
+                                        "labels": {
+                                            "add": "Add an attachment",
+                                            "edit": "Edit an attachment"
+                                        }
+                                    },
+                                    {
+                                        "name": "cc",
+                                        "spec": {
+                                            "name": "email",
+                                            "type": "email",
+                                            "label": "Email address"
+                                        },
+                                        "type": "array",
+                                        "label": "Copy recipient",
+                                        "labels": {
+                                            "add": "Add a copy recipient",
+                                            "edit": "Edit a copy recipient"
+                                        }
+                                    },
+                                    {
+                                        "name": "bcc",
+                                        "spec": {
+                                            "name": "email",
+                                            "type": "email",
+                                            "label": "Email address"
+                                        },
+                                        "type": "array",
+                                        "label": "Blind copy recipient",
+                                        "labels": {
+                                            "add": "Add a blind copy recipient",
+                                            "edit": "Edit a blind copy recipient"
+                                        }
+                                    },
+                                    {
+                                        "name": "from",
+                                        "type": "text",
+                                        "label": "From"
+                                    },
+                                    {
+                                        "name": "sender",
+                                        "type": "text",
+                                        "label": "Sender"
+                                    },
+                                    {
+                                        "name": "replyTo",
+                                        "type": "text",
+                                        "label": "Reply-To"
+                                    },
+                                    {
+                                        "name": "inReplyTo",
+                                        "type": "text",
+                                        "label": "In-Reply-To"
+                                    },
+                                    {
+                                        "name": "references",
+                                        "spec": {
+                                            "type": "text",
+                                            "label": "Reference",
+                                            "required": true
+                                        },
+                                        "type": "array",
+                                        "label": "References"
+                                    },
+                                    {
+                                        "name": "priority",
+                                        "type": "select",
+                                        "label": "Priority",
+                                        "validate": {
+                                            "enum": [
+                                                "high",
+                                                "normal",
+                                                "low"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "headers",
+                                        "spec": [
+                                            {
+                                                "name": "key",
+                                                "type": "text",
+                                                "label": "Key",
+                                                "required": true
+                                            },
+                                            {
+                                                "name": "value",
+                                                "type": "text",
+                                                "label": "Value",
+                                                "required": true
+                                            }
+                                        ],
+                                        "type": "array",
+                                        "label": "Headers"
+                                    },
+                                    {
+                                        "name": "html",
+                                        "type": "text",
+                                        "label": "Content"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": false,
+            "sequential": false,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.integromat.com"
+    }
+}

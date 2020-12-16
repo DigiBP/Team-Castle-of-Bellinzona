@@ -1,0 +1,92 @@
+{
+  "id": "721bf68f-a2c8-4c81-a91b-c6f5d46f1347",
+  "name": "Maximum number of samples",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "e3a0d39e-82c6-40e6-a18a-19783ab8540e",
+          "name": "Maximum",
+          "required": false,
+          "dataType": "@Maximum",
+          "value": "$Maximum",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "5164e070-3cd8-4f8f-9559-11d8e9df86db",
+          "name": "Whatis",
+          "required": false,
+          "dataType": "@Whatis",
+          "value": "$Whatis",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "ae976b06-51d6-45a2-abe6-a981eb132e6a",
+          "name": "Number",
+          "required": false,
+          "dataType": "@Number",
+          "value": "$Number",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "67b3f172-7660-4ca0-8780-5b0d8aee80e0",
+          "name": "Samples",
+          "required": false,
+          "dataType": "@Samples",
+          "value": "$Samples",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "There are no limitations to the maximum number of samples to be measured."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

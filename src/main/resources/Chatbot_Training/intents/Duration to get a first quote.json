@@ -1,0 +1,64 @@
+{
+  "id": "bab79797-ed68-4fae-b94b-7e727b6a5b93",
+  "name": "Duration to get a first quote",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b8f129cd-327b-4981-af26-56a155961955",
+          "name": "Quote",
+          "required": false,
+          "dataType": "@Quote",
+          "value": "$Quote",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        },
+        {
+          "id": "d9417b68-a1d1-45b8-b077-ee5969d693cc",
+          "name": "Duration",
+          "required": false,
+          "dataType": "@Duration",
+          "value": "$Duration",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Usually this process takes at maximum one working day after your order has been placed, if no questions arise from our side considering your order placement."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
